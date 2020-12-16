@@ -10,6 +10,7 @@ import java.util.List;
 @Component
 public class DependencyInjectionDemo {
     EmployeeService employeeService;
+
     List<Work> listik = Arrays.asList(new Programmer(1700, 200), new Driver(1000,300), new Teacher(900,100));
 
 
