@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.appslab.springbootapp.EmployeeService;
+import com.appslab.springbootapp.EmployeeServicempl;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -29,6 +30,12 @@ public class EmployeeController  {
         return employeeService.bonusNum(listik);
     }
 
+   @GetMapping("/snail")
 
+   public double totalDistance(@RequestParam double height,@RequestParam double length,@RequestParam double tower) {
+       double stairs = tower /height;
+       return stairs * (height + length);
+   }
 
 }
+

@@ -30,5 +30,8 @@ public class EmployeeServicempl implements EmployeeService {
         number += 1;
         return number;
     }
-
+    public static double totalDistance(double height, double length, double tower) {
+        double stairs = tower /height;
+        return stairs * (height + length);
+    }
 }
