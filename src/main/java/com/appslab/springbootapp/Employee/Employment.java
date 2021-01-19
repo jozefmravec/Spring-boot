@@ -1,4 +1,4 @@
-package com.appslab.springbootapp.model;
+package com.appslab.springbootapp.Employee;
 
 public enum Employment {
     DRIVER("Driver"),

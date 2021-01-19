@@ -1,9 +1,6 @@
-package com.appslab.springbootapp.model;
+package com.appslab.springbootapp.Employee;
 
-import com.appslab.springbootapp.EmployeeService;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class EmployeeSecond {

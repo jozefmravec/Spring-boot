@@ -1,7 +1,7 @@
 package com.appslab.springbootapp.model;
 
 
-import com.appslab.springbootapp.model.Employment;
+import com.appslab.springbootapp.Employee.Employment;
 
 public class Work {
     float salary;

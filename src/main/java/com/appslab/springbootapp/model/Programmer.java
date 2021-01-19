@@ -1,6 +1,8 @@
 package com.appslab.springbootapp.model;
 
 
+import com.appslab.springbootapp.Employee.Employment;
+
 public class Programmer extends Work {
 
     public String getInf(int total)

@@ -1,9 +1,10 @@
-package com.appslab.springbootapp.model;
+package com.appslab.springbootapp.Company;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CompanyServiceImpl implements CompanyService{
+public class CompanyServiceImpl implements CompanyService {
    public CompanyRepository companyRepository;
 
     public CompanyServiceImpl(CompanyRepository companyRepository) {
