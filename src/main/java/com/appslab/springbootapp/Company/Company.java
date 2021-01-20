@@ -15,7 +15,6 @@ public class Company {
     private String name;
     @OneToOne (cascade = CascadeType.ALL)
     @NotNull
-
     Address address;
     public Company(String name, Address address) {
         this.name = name;
