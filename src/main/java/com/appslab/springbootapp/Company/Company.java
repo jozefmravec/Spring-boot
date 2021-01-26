@@ -1,5 +1,6 @@
 package com.appslab.springbootapp.Company;
 
+import com.appslab.springbootapp.Employee.Employee;
 import com.appslab.springbootapp.model.Address;
 import com.sun.istack.NotNull;
 import org.hibernate.annotations.Cascade;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 public class Company {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+    private int id;
     private String name;
     @OneToOne (cascade = CascadeType.ALL)
     @NotNull

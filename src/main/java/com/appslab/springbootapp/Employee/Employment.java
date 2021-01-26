@@ -11,4 +11,14 @@ public enum Employment {
         this.Empoyment = i;
     }
 
+    public String getEmpoyment() {
+        return Empoyment;
+    }
+
+    public void setEmpoyment(String empoyment) {
+        Empoyment = empoyment;
+    }
+
+
+
 }
