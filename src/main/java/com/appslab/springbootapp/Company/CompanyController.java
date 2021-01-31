@@ -1,7 +1,6 @@
 package com.appslab.springbootapp.Company;
 
-import com.appslab.springbootapp.Employee.Employee;
-import com.appslab.springbootapp.model.Address;
+import com.appslab.springbootapp.Employee.model.Address;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

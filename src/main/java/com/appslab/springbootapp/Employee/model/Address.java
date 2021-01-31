@@ -1,4 +1,4 @@
-package com.appslab.springbootapp.model;
+package com.appslab.springbootapp.Employee.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

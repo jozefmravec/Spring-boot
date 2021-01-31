@@ -1,10 +1,7 @@
 package com.appslab.springbootapp.Company;
 
-import com.appslab.springbootapp.Employee.Employee;
-import com.appslab.springbootapp.model.Address;
+import com.appslab.springbootapp.Employee.model.Address;
 import com.sun.istack.NotNull;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.NotFound;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.appslab.springbootapp.Employee;
+package com.appslab.springbootapp.Employee.model;
 
 public enum Employment {
     DRIVER("Driver"),
@@ -12,7 +12,7 @@ public enum Employment {
     }
 
     public String getEmpoyment() {
-        return Empoyment;
+        return this.name();
     }
 
     public void setEmpoyment(String empoyment) {

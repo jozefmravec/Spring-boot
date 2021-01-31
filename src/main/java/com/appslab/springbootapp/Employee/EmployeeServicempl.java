@@ -1,6 +1,6 @@
 package com.appslab.springbootapp.Employee;
 
-import com.appslab.springbootapp.model.Work;
+import com.appslab.springbootapp.Employee.model.Employee;
 import org.springframework.stereotype.Service;
 
 
@@ -10,16 +10,16 @@ import java.util.List;
 public class EmployeeServicempl implements EmployeeService {
     int number = 0;
     @Override
-    public float salaryNum(List<Work> list)
+    public float salaryNum(List<Employee> list)
     {
        return (float) list.stream()
-                .mapToDouble(Work::getSalary).sum();
+                .mapToDouble(Employee::getSalary).sum();
     }
 
     @Override
-    public int bonusNum(List<Work> list) {
+    public int bonusNum(List<Employee> list) {
         return list.stream()
-                .mapToInt(Work::getBonus).sum();
+                .mapToInt(Employee::getBonus).sum();
     }
 
     @Override

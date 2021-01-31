@@ -1,13 +1,13 @@
 package com.appslab.springbootapp.Employee;
 
-import com.appslab.springbootapp.model.Work;
+import com.appslab.springbootapp.Employee.model.Employee;
 
 import java.util.List;
 
 
 public interface EmployeeService {
-    float salaryNum(List<Work> list);
-    int bonusNum(List<Work> list);
+    float salaryNum(List<Employee> list);
+    int bonusNum(List<Employee> list);
 
     int writeNumber();
 

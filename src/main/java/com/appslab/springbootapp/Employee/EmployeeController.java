@@ -2,18 +2,17 @@ package com.appslab.springbootapp.Employee;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
-import com.appslab.springbootapp.model.Driver;
-import com.appslab.springbootapp.model.Programmer;
-import com.appslab.springbootapp.model.Teacher;
-import com.appslab.springbootapp.model.Work;
+import com.appslab.springbootapp.Employee.model.Driver;
+import com.appslab.springbootapp.Employee.model.Programmer;
+import com.appslab.springbootapp.Employee.model.Teacher;
+import com.appslab.springbootapp.Employee.model.Employee;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class EmployeeController {
     EmployeeService employeeService;
-    List<Work> listik = Arrays.asList(new Programmer(1700, 200), new Driver(1000, 300), new Teacher(900, 100));
+    List<Employee> listik = Arrays.asList(new Programmer(1700, 200), new Driver(1000, 300), new Teacher(900, 100));
 
     @RequestMapping("/hello")
     public String greeting() {
@@ -41,9 +40,9 @@ public class EmployeeController {
         return stairs * (height + length);
     }
 
-    @RequestMapping(value = "/employee")
-    public String emp(){
-     return Employment.PROGRAMMER.toString().toLowerCase() + (" ") + Employment.TEACHER.toString().toLowerCase() + (" ") + Employment.DRIVER.toString().toLowerCase() + (" ");
+    @PostMapping(value = "/employee")
+    public Employee employee(@RequestBody Employee employee){
+     return employee;
     }
 
 
