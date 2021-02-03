@@ -3,6 +3,7 @@ package com.appslab.springbootapp.Employee;
 import java.util.Arrays;
 import java.util.List;
 
+import com.appslab.springbootapp.Company.CompanyService;
 import com.appslab.springbootapp.Employee.model.Driver;
 import com.appslab.springbootapp.Employee.model.Programmer;
 import com.appslab.springbootapp.Employee.model.Teacher;
@@ -19,9 +20,6 @@ public class EmployeeController {
         return "Hello Spring Boot";
     }
 
-    public EmployeeController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
 
     @GetMapping("/salary")
     public float getSalary() {
@@ -41,10 +39,13 @@ public class EmployeeController {
     }
 
     @PostMapping(value = "/employee")
-    public Employee employee(@RequestBody Employee employee){
-     return employee;
+    public void employee(@RequestBody Employee employee){
+      employeeService.saveEmployee(employee);
     }
-
+    public EmployeeController(EmployeeService employeeService)
+    {
+        this.employeeService = employeeService;
+    }
 
 }
 
