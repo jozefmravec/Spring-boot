@@ -1,10 +1,12 @@
 package com.appslab.springbootapp.Employee.model;
 
 
+import com.appslab.springbootapp.Company.Company;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.Type;
+
 
 import javax.persistence.*;
 
@@ -21,18 +23,24 @@ import javax.persistence.*;
 }
 )
 
+@Table(name = "employee")
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Employee {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    int id;
+    long id;
     float salary;
     int bonus;
     @Enumerated(EnumType.STRING)
     Employment employee;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "company_id", insertable = false,updatable = false, nullable = false)
+    private Company company;
+    @Column(name = "company_id")
+    private long companyId;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

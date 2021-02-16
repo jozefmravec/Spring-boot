@@ -1,5 +1,10 @@
 package com.appslab.springbootapp.Employee.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 public enum Employment {
     DRIVER("Driver"),
     PROGRAMMER("Programmer"),
